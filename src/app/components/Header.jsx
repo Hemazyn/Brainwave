@@ -21,7 +21,7 @@ export default function Header() {
   };
 
   return (
-    <header className="shadow bg-background text-foreground fixed top-4 left-1/2 z-50 w-[95vw] max-w-4xl -translate-x-1/2 rounded-lg">
+    <header className="bg-background text-foreground fixed top-4 left-1/2 z-50 w-[95vw] max-w-4xl -translate-x-1/2 rounded-lg shadow">
       <nav className="flex h-16 w-full items-center justify-between gap-6 px-4 md:gap-4">
         <Link href="/" className="text-accent text-2xl font-bold">
           Brainwave
@@ -88,7 +88,7 @@ export default function Header() {
                 <X className="text-accent h-7 w-7" />
               </button>
             </div>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 p-3 rounded-b-lg bg-background border border-accent">
               {[
                 { label: "services", items: services },
                 { label: "industries", items: industries },
