@@ -41,29 +41,29 @@ const solutionsData = [
 
 export default function Solutions() {
   return (
-    <section className="py-10 bg-neutral-soft-white px-1 md:p-0">
-      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 rounded-[40px] bg-white border">
+    <section className="bg-background px-1 py-10 md:p-0">
+      <div className="border-border bg-card-background mx-auto max-w-7xl rounded-[40px] border px-4 py-6 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">★ Services</div>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">Our Solutions for your Digital Growth</h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">We offer expert Webflow design, development, SEO, and support services—tailored to boost your website’s performance, user experience, and growth.</p>
+          <div className="bg-muted text-muted-foreground inline-block rounded-full px-3 py-1 text-sm font-semibold">★ Services</div>
+          <h2 className="text-foreground mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">Our Solutions for your Digital Growth</h2>
+          <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8">We offer expert Webflow design, development, SEO, and support services—tailored to boost your website’s performance, user experience, and growth.</p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 sm:mt-16 md:grid-cols-2 lg:grid-cols-3">
           {solutionsData.map((solution) => {
             const IconComponent = solution.icon;
             return (
-              <div key={solution.title} className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-orange-500 hover:shadow-lg sm:p-8">
+              <div key={solution.title} className="group border-border bg-card flex flex-col rounded-2xl border p-6 shadow-sm transition hover:-translate-y-1 hover:border-orange-500 hover:shadow-lg sm:p-8">
                 <div className="flex-shrink-0">
-                  <IconComponent className="h-8 w-8 text-gray-500 transition-colors group-hover:text-orange-500" aria-hidden="true" />
+                  <IconComponent className="text-muted-foreground h-8 w-8 transition-colors group-hover:text-orange-500" aria-hidden="true" />
                 </div>
                 <div className="mt-4 flex-grow">
-                  <h3 className="text-lg font-semibold text-gray-900 transition-colors group-hover:text-orange-500 sm:text-xl">{solution.title}</h3>
-                  <p className="mt-2 text-base text-gray-600">{solution.description}</p>
+                  <h3 className="text-foreground text-lg font-semibold transition-colors group-hover:text-orange-500 sm:text-xl">{solution.title}</h3>
+                  <p className="text-muted-foreground mt-2 text-base">{solution.description}</p>
                 </div>
-                <div className="mt-6 border-t border-gray-200/60 pt-6">
+                <div className="border-border/60 mt-6 border-t pt-6">
                   <div className="flex flex-wrap gap-2">
                     {solution.tags.map((tag) => (
-                      <span key={tag} className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700">
+                      <span key={tag} className="bg-muted text-muted-foreground inline-flex items-center rounded-full px-3 py-1 text-xs font-medium">
                         {tag}
                       </span>
                     ))}

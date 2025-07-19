@@ -38,38 +38,37 @@ const successStoriesData = [
 
 export default function Success() {
   return (
-    <section className="bg-gray-50 py-10">
+    <section className="bg-background py-10">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="inline-block rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700">✦ Case Studies</div>
-          <h2 className="mt-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Selected Success Stories</h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">Explore our portfolio of exceptional web design and custom Webflow websites that drive results for businesses worldwide.</p>
+          <div className="bg-muted text-muted-foreground inline-block rounded-full px-3 py-1 text-xs font-semibold">✦ Case Studies</div>
+          <h2 className="text-foreground mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Selected Success Stories</h2>
+          <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-8">Explore our portfolio of exceptional web design and custom Webflow websites that drive results for businesses worldwide.</p>
         </div>
         <div className="mt-8 space-y-8 md:mt-16">
           {successStoriesData.map((story, index) => {
-            const LogoComponent = story.companyLogo;
             const isReversed = index % 2 !== 0;
             return (
-              <div key={story.imageSrc} className="hover:border-accent-vibrant-orange overflow-hidden rounded-[18px] bg-white shadow-lg transition hover:border hover:shadow-xl md:rounded-[26px]">
+              <div key={story.imageSrc} className="hover:border-accent-vibrant-orange border-border bg-card overflow-hidden rounded-[18px] border shadow-lg transition hover:border hover:shadow-xl md:rounded-[26px]">
                 <div className={`flex flex-col gap-6 p-3 md:flex-row md:p-5 ${isReversed ? "md:flex-row-reverse" : ""}`}>
                   <div className="w-full md:w-1/2">
                     <Image src={story.imageSrc} alt={story.imageAlt} width={800} height={600} className="h-64 w-full rounded-md object-cover sm:h-80 md:h-full" />
                   </div>
                   <div className="p4 flex w-full flex-col justify-center md:w-1/2 md:p-6">
-                    <p className="mt-4 text-base leading-7 font-medium text-gray-700">{story.description}</p>
+                    <p className="text-muted-foreground mt-4 text-base leading-7 font-medium">{story.description}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {story.tags.map((tag) => (
-                        <span key={tag} className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                        <span key={tag} className="bg-muted text-muted-foreground rounded-full px-3 py-1 text-xs font-medium">
                           {tag}
                         </span>
                       ))}
                     </div>
-                    <hr className="my-6 border-gray-200" />
+                    <hr className="border-border my-6" />
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{story.metricValue}</h3>
-                      <p className="mt-1 text-sm text-gray-600">{story.metricLabel}</p>
+                      <h3 className="text-foreground text-2xl font-bold">{story.metricValue}</h3>
+                      <p className="text-muted-foreground mt-1 text-sm">{story.metricLabel}</p>
                     </div>
-                    <div className="mt-2 text-xs text-gray-500">
+                    <div className="text-muted-foreground mt-2 text-xs">
                       {story.services.map((service, i) => (
                         <span key={service}>
                           {service}

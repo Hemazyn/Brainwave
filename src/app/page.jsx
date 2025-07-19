@@ -1,14 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Loader from "./components/Loader";
-import LogoGrid from "./components/LogoGrid";
-import Solutions from "./components/Solutions";
-import Success from "./components/Success";
-import CallToAction from "./components/CallToAction";
-import AnimatedHero from "./components/AnimatedHero";
-import Testimonials from "./components/testimonialsData";
+import { Header, Main, Loader, LogoGrid, Solutions, Success, CallToAction, AnimatedHero, Testimonials, ResourcesSection, Contact, Footer } from "./components";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +27,9 @@ export default function Home() {
           <CallToAction />
           <AnimatedHero />
           <Testimonials />
+          <ResourcesSection />
+          <Contact />
+          <Footer />
         </div>
       )}
     </>
